@@ -15,7 +15,6 @@ class AddAlarmViewController: UIViewController {
     @IBOutlet weak var repeatSwitch: UISwitch!
     @IBOutlet weak var repeatStackView: UIStackView!
     @IBOutlet weak var repeatModeButton: UIButton!
-    @IBOutlet var doneButton: UIBarButtonItem!
     
     enum ViewMode {
         case create
@@ -69,8 +68,11 @@ class AddAlarmViewController: UIViewController {
     }
     
     private func updateDoneButton() {
-        self.doneButton = UIBarButtonItem(systemItem: mode.returnNavButtonStyle())
-        self.doneButton.action = #selector(doneAction(_:))
+        self.navigationItem.rightBarButtonItem = nil
+        let button          = UIBarButtonItem(barButtonSystemItem: self.mode.returnNavButtonStyle(), target: self, action: #selector(doneAction(_:)))
+        button.tintColor    = .label
+        button.style        = .done
+        self.navigationItem.rightBarButtonItem = button
     }
     
     private func setAlarm(for date: Date) {

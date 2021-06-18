@@ -291,17 +291,10 @@
                                 <action selector="backAction:" destination="cx8-IJ-d6r" id="xqy-bt-Qae"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="Tec-tp-kbx">
-                            <color key="tintColor" systemColor="labelColor"/>
-                            <connections>
-                                <action selector="doneAction:" destination="cx8-IJ-d6r" id="rBx-uh-9xL"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="dateField" destination="TKp-xV-Au1" id="NT4-EI-4xh"/>
                         <outlet property="descriptionField" destination="iuM-b3-CJv" id="G7J-n7-iUB"/>
-                        <outlet property="doneButton" destination="Tec-tp-kbx" id="ikK-jT-xay"/>
                         <outlet property="nameField" destination="qsT-r2-3oX" id="ivI-za-I7J"/>
                         <outlet property="repeatModeButton" destination="CU3-lR-Ydg" id="s7n-by-6oE"/>
                         <outlet property="repeatStackView" destination="Nqv-a9-Spw" id="pqe-dc-7aQ"/>
