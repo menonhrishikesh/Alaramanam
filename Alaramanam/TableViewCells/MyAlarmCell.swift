@@ -22,14 +22,18 @@ class MyAlarmCell: UITableViewCell {
     }
     
     private func reset() {
-        self.nameLabel.text = ""
-        self.timeLabel.text = ""
+        self.nameLabel.text     = ""
+        self.timeLabel.text     = ""
+        self.repeatLabel.text   = ""
     }
     
     func populateMyAlarmCell(alarm: Alarm) {
-        self.nameLabel.text     = alarm.name
-        self.timeLabel.text     = alarm.returnDateString()
-        self.repeatLabel.text   = alarm.repeatHours.returnString()
+        self.reset()
+        self.nameLabel.text         = alarm.name
+        self.timeLabel.text         = alarm.returnDateString()
+        if alarm.repeatable {
+            self.repeatLabel.text   = alarm.repeatHours.returnString()
+        }
     }
 
 }
