@@ -57,7 +57,7 @@ class Alarm: NSObject {
     
     func returnDateString() -> String {
         if let date = self.date {
-            return DateHelper.returnString(for: date, in: .dateMonthTime) ?? ""
+            return DateHelper.returnString(for: date, in: .ddMMMyyyyhhmma) ?? ""
         }
         return ""
     }

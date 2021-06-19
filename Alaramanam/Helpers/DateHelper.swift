@@ -10,7 +10,9 @@ import Foundation
 class DateHelper: NSObject {
     
     enum DateFormats: String {
-        case dateMonthTime = "dd-MMM, yyyy @ hh:mm a"
+        case ddMMMyyyyhhmma = "dd-MMM, yyyy @ hh:mm a"
+        case ddMMMyyyy      = "dd-MMM, yyyy"
+        case hhmma          = "hh:mm a"
     }
     
     class func returnDate(for string: String?, with format: DateFormats) -> Date? {

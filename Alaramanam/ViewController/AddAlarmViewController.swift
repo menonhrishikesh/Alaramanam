@@ -64,7 +64,7 @@ class AddAlarmViewController: UIViewController {
         
         if let model = self.currentAlarm {
             self.nameField.text             = model.name
-            self.dateField.text             = DateHelper.returnString(for: model.date, in: .dateMonthTime)
+            self.dateField.text             = DateHelper.returnString(for: model.date, in: .ddMMMyyyyhhmma)
             self.descriptionField.text      = model.alarmDesc
             self.repeatStackView.isHidden   = !model.repeatable
             self.repeatModeField.text       = model.repeatHours.returnString()
@@ -76,7 +76,7 @@ class AddAlarmViewController: UIViewController {
         
         self.dateField.inputView = CustomDatePicker.instanceFromNib(onSelectingDate: { (date) in
             self.selectedDate   = date
-            self.dateField.text = DateHelper.returnString(for: date, in: .dateMonthTime)
+            self.dateField.text = DateHelper.returnString(for: date, in: .ddMMMyyyyhhmma)
             self.dateField.resignFirstResponder()
         })
         
