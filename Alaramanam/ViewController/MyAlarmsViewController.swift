@@ -94,4 +94,24 @@ extension MyAlarmsViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    //MARK:- Swipe To Delete
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            AlertHelper.showActionSheet(title: nil, message: "Do you want to remove this alarm?", actions: [UIAlertAction(title: "Yes", style: .destructive, handler: { (action) in
+                self.alarms.remove(at: indexPath.row)
+                DispatchQueue.main.async {
+                    self.alarmsTableView.reloadData()
+                }
+            }), UIAlertAction(title: "No", style: .cancel, handler: nil)], viewController: self)
+        }
+    }
+    
 }
