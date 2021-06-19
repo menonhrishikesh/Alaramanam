@@ -142,14 +142,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qz7-Rf-4Br">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="qz7-Rf-4Br">
                                 <rect key="frame" x="0.0" y="140" width="375" height="672"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JMj-mO-YyE">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JMj-mO-YyE" userLabel="ContentView">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="672"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="gKc-8l-lXX">
-                                                <rect key="frame" x="20" y="50" width="335" height="277"/>
+                                                <rect key="frame" x="20" y="20" width="335" height="277"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="lAy-Ul-w5r">
                                                         <rect key="frame" x="0.0" y="0.0" width="335" height="28"/>
@@ -316,20 +316,18 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="gKc-8l-lXX" secondAttribute="bottom" constant="50" id="6tu-CH-Jlj"/>
-                                            <constraint firstAttribute="trailing" secondItem="gKc-8l-lXX" secondAttribute="trailing" constant="20" id="CyF-xX-EyD"/>
-                                            <constraint firstItem="gKc-8l-lXX" firstAttribute="leading" secondItem="JMj-mO-YyE" secondAttribute="leading" constant="20" id="qBV-dl-e3H"/>
-                                            <constraint firstItem="gKc-8l-lXX" firstAttribute="top" secondItem="JMj-mO-YyE" secondAttribute="top" constant="50" id="w6O-UZ-NS1"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="gKc-8l-lXX" secondAttribute="bottom" constant="20" symbolic="YES" id="2f0-b3-O7K"/>
+                                            <constraint firstItem="gKc-8l-lXX" firstAttribute="leading" secondItem="JMj-mO-YyE" secondAttribute="leading" constant="20" symbolic="YES" id="D3p-Dg-OZj"/>
+                                            <constraint firstItem="gKc-8l-lXX" firstAttribute="top" secondItem="JMj-mO-YyE" secondAttribute="top" constant="20" symbolic="YES" id="UYZ-Yo-4fu"/>
+                                            <constraint firstAttribute="trailing" secondItem="gKc-8l-lXX" secondAttribute="trailing" constant="20" symbolic="YES" id="UfG-UG-Tgb"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="JMj-mO-YyE" firstAttribute="centerX" secondItem="qz7-Rf-4Br" secondAttribute="centerX" id="Cly-OK-Yuo"/>
-                                    <constraint firstItem="JMj-mO-YyE" firstAttribute="bottom" secondItem="Gw1-5K-6Ty" secondAttribute="bottom" id="Cmj-7U-LLP"/>
-                                    <constraint firstAttribute="trailing" secondItem="JMj-mO-YyE" secondAttribute="trailing" id="GDT-k8-U6h"/>
-                                    <constraint firstItem="JMj-mO-YyE" firstAttribute="leading" secondItem="qz7-Rf-4Br" secondAttribute="leading" id="eRd-S8-s4l"/>
-                                    <constraint firstItem="JMj-mO-YyE" firstAttribute="top" secondItem="R13-hL-qLn" secondAttribute="top" id="rZF-fe-u32"/>
-                                    <constraint firstAttribute="bottom" secondItem="JMj-mO-YyE" secondAttribute="bottom" id="xpb-hZ-bTq"/>
+                                    <constraint firstAttribute="trailing" secondItem="JMj-mO-YyE" secondAttribute="trailing" id="Dsa-RT-r0c"/>
+                                    <constraint firstAttribute="bottom" secondItem="JMj-mO-YyE" secondAttribute="bottom" id="JY0-bI-UyU"/>
+                                    <constraint firstItem="JMj-mO-YyE" firstAttribute="top" secondItem="qz7-Rf-4Br" secondAttribute="top" id="TQT-Jf-Gla"/>
+                                    <constraint firstItem="JMj-mO-YyE" firstAttribute="leading" secondItem="qz7-Rf-4Br" secondAttribute="leading" id="hOX-8K-DFP"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="R13-hL-qLn"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="Gw1-5K-6Ty"/>
@@ -338,12 +336,12 @@
                         <viewLayoutGuide key="safeArea" id="rgm-M8-suw"/>
                         <color key="backgroundColor" name="blue_5f94dc"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="qz7-Rf-4Br" secondAttribute="trailing" id="DRD-hO-Dgw"/>
-                            <constraint firstItem="qz7-Rf-4Br" firstAttribute="leading" secondItem="h5R-Wf-m9o" secondAttribute="leading" id="WeD-vQ-Fa9"/>
-                            <constraint firstItem="qz7-Rf-4Br" firstAttribute="top" secondItem="rgm-M8-suw" secondAttribute="top" id="dlN-Of-6Gp"/>
-                            <constraint firstAttribute="bottom" secondItem="qz7-Rf-4Br" secondAttribute="bottom" id="j6F-rx-lHS"/>
-                            <constraint firstItem="JMj-mO-YyE" firstAttribute="width" secondItem="h5R-Wf-m9o" secondAttribute="width" id="wST-BY-yfI"/>
-                            <constraint firstItem="JMj-mO-YyE" firstAttribute="height" secondItem="h5R-Wf-m9o" secondAttribute="height" multiplier="0.827586" priority="250" id="zZ6-eU-qgP"/>
+                            <constraint firstItem="qz7-Rf-4Br" firstAttribute="top" secondItem="rgm-M8-suw" secondAttribute="top" id="3hA-j1-xAP"/>
+                            <constraint firstItem="JMj-mO-YyE" firstAttribute="width" secondItem="h5R-Wf-m9o" secondAttribute="width" id="6FF-pp-eNq"/>
+                            <constraint firstItem="JMj-mO-YyE" firstAttribute="height" secondItem="h5R-Wf-m9o" secondAttribute="height" multiplier="0.827586" priority="250" id="8FT-ha-7j6"/>
+                            <constraint firstItem="qz7-Rf-4Br" firstAttribute="leading" secondItem="rgm-M8-suw" secondAttribute="leading" id="BP9-kK-WaL"/>
+                            <constraint firstItem="qz7-Rf-4Br" firstAttribute="trailing" secondItem="rgm-M8-suw" secondAttribute="trailing" id="Ino-8X-UMV"/>
+                            <constraint firstAttribute="bottom" secondItem="qz7-Rf-4Br" secondAttribute="bottom" id="JV9-qt-ZXh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Set Alarm" id="vyp-4w-vJI">
