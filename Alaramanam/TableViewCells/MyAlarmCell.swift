@@ -11,7 +11,7 @@ class MyAlarmCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
-    
+    @IBOutlet weak var repeatLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,8 +27,9 @@ class MyAlarmCell: UITableViewCell {
     }
     
     func populateMyAlarmCell(alarm: Alarm) {
-        self.nameLabel.text = alarm.name
-        self.timeLabel.text = alarm.returnDateString()
+        self.nameLabel.text     = alarm.name
+        self.timeLabel.text     = alarm.returnDateString()
+        self.repeatLabel.text   = alarm.repeatHours.returnString()
     }
 
 }

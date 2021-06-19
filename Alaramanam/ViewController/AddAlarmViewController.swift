@@ -89,7 +89,8 @@ class AddAlarmViewController: UIViewController {
     
     private func setAlarm(for date: Date) {
         let alarm = Alarm(name: self.nameField.text ?? "Alarm @ \(String(describing: dateField.text))", date: date, repeatable: self.repeatSwitch.isOn, repeatHours: .daily)
-        self.onAddingAlarm?(alarm)
+        let savedAlarm = SavedAlarms.new(alarm)
+        self.onAddingAlarm?(savedAlarm)
         self.backAction(self)
     }
     

@@ -47,6 +47,10 @@ class Alarm: NSObject {
         self.populateAlarm(name: name, date: date, repeatable: repeatable, repeatHours: repeatHours)
     }
     
+    override init() {
+        super.init()
+    }
+    
     func populateAlarm(name: String, date: Date, repeatable: Bool, repeatHours: AlarmRepeatTime) {
         self.id             = Alarm.getAlarmID()
         self.name           = name

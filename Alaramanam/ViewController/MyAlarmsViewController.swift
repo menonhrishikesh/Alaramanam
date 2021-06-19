@@ -17,12 +17,22 @@ class MyAlarmsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
+        self.fetchSavedAlarms()
     }
     
     private func setupUI() {
         self.alarmsTableView.rowHeight                      = UITableView.automaticDimension
         self.alarmsTableView.estimatedRowHeight             = 50
         self.alarmsTableView.tableFooterView                = UIView(frame: .zero)
+    }
+    
+    private func fetchSavedAlarms() {
+        if let fetchedAlarms = SavedAlarms.fetchAll() {
+            self.alarms = fetchedAlarms.compactMap({return $0.alarm })
+            DispatchQueue.main.async {
+                self.alarmsTableView.reloadData()
+            }
+        }
     }
     
     //MARK:- Navigation
@@ -35,8 +45,8 @@ class MyAlarmsViewController: UIViewController {
                 addAlarmViewController.mode = .read
             }
             
-            addAlarmViewController.onAddingAlarm = { alarm in
-                self.alarms.append(alarm)
+            addAlarmViewController.onAddingAlarm = { savedAlarm in
+                self.alarms.append(savedAlarm.alarm)
                 self.alarms.sort(by: { ($0.date ?? Date()) < ($1.date ?? Date()) })
                 self.alarmsTableView.reloadData()
             }

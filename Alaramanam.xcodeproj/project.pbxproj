@@ -27,6 +27,8 @@
 		23BB7EED267C76C400C11272 /* MyAlarmsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BB7EEA267C76C400C11272 /* MyAlarmsViewController.swift */; };
 		23BB7EF1267C76E800C11272 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BB7EF0267C76E800C11272 /* Alarm.swift */; };
 		23BB7EF4267C82A800C11272 /* MyAlarmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BB7EF3267C82A800C11272 /* MyAlarmCell.swift */; };
+		23F403D9267DC66400970868 /* SavedAlarms+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F403D7267DC66400970868 /* SavedAlarms+CoreDataProperties.swift */; };
+		23F403DA267DC66400970868 /* SavedAlarms+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F403D8267DC66400970868 /* SavedAlarms+CoreDataClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		23BB7EEA267C76C400C11272 /* MyAlarmsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAlarmsViewController.swift; sourceTree = "<group>"; };
 		23BB7EF0267C76E800C11272 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 		23BB7EF3267C82A800C11272 /* MyAlarmCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAlarmCell.swift; sourceTree = "<group>"; };
+		23F403D7267DC66400970868 /* SavedAlarms+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SavedAlarms+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		23F403D8267DC66400970868 /* SavedAlarms+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SavedAlarms+CoreDataClass.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				23BB7EF0267C76E800C11272 /* Alarm.swift */,
+				23F403D6267DC66400970868 /* CoreData */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -147,6 +152,15 @@
 				23BB7EF3267C82A800C11272 /* MyAlarmCell.swift */,
 			);
 			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		23F403D6267DC66400970868 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				23F403D7267DC66400970868 /* SavedAlarms+CoreDataProperties.swift */,
+				23F403D8267DC66400970868 /* SavedAlarms+CoreDataClass.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,10 +240,12 @@
 				23BB7ED1267C6F8400C11272 /* AppDelegate.swift in Sources */,
 				23BB7EDB267C6F8400C11272 /* Alaramanam.xcdatamodeld in Sources */,
 				23B716C1267CAE1C004839BD /* AddAlarmViewController.swift in Sources */,
+				23F403D9267DC66400970868 /* SavedAlarms+CoreDataProperties.swift in Sources */,
 				23BB7EF1267C76E800C11272 /* Alarm.swift in Sources */,
 				23BB7EED267C76C400C11272 /* MyAlarmsViewController.swift in Sources */,
 				23BB7ED3267C6F8400C11272 /* SceneDelegate.swift in Sources */,
 				23B716C8267CB40B004839BD /* DateHelper.swift in Sources */,
+				23F403DA267DC66400970868 /* SavedAlarms+CoreDataClass.swift in Sources */,
 				23BB7EF4267C82A800C11272 /* MyAlarmCell.swift in Sources */,
 				2318841F267CEBA2008D61D7 /* DeviceHelper.swift in Sources */,
 				2318841C267CE9F7008D61D7 /* CustomPickerView.swift in Sources */,
@@ -391,7 +407,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Hrishikesh.Alaramanam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -409,7 +425,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Hrishikesh.Alaramanam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

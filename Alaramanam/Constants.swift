@@ -8,7 +8,7 @@
 import Foundation
 
 typealias CompletionHandler = () -> ()
-typealias AlarmPasser       = (_ alarm: Alarm) -> ()
+typealias AlarmPasser       = (_ alarm: SavedAlarms) -> ()
 typealias StringPasser      = (_ string: String) -> ()
 typealias DatePasser        = (_ date: Date) -> ()
 
