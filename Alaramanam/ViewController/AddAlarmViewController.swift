@@ -38,29 +38,18 @@ class AddAlarmViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupUI()
-    }
-    
-    private func setupUI() {
         self.setupFields()
         self.setupInputViews()
         self.setupNavigationButton()
     }
     
-    private func setupFields() {
-        if mode == .read {
-            self.nameField.isEnabled            = false
-            self.dateField.isEnabled            = false
-            self.descriptionField.isEditable    = false
-            self.repeatSwitch.isEnabled         = false
-            self.repeatModeField.isEnabled      = false
-        } else {
-            self.nameField.isEnabled            = true
-            self.dateField.isEnabled            = true
-            self.descriptionField.isEditable    = true
-            self.repeatSwitch.isEnabled         = true
-            self.repeatModeField.isEnabled      = true
-        }
+    private func setupFields() {        
+        self.nameField.isEnabled                        = (mode != .read)
+        self.dateField.isEnabled                        = (mode != .read)
+        self.descriptionField.isEditable                = (mode != .read)
+        self.repeatSwitch.isEnabled                     = (mode != .read)
+        self.repeatModeField.isEnabled                  = (mode != .read)
+        self.descriptionField.isUserInteractionEnabled  = (mode != .read)
         
         if let model = self.currentAlarm {
             self.nameField.text             = model.name
@@ -113,7 +102,8 @@ class AddAlarmViewController: UIViewController {
     @IBAction func doneAction(_ sender: Any) {
         if self.mode == .read {
             self.mode = .edit
-            self.setupUI()
+            self.setupFields()
+            self.setupNavigationButton()
         } else {
             self.selectedDate = Date()
             if let date = self.selectedDate {
