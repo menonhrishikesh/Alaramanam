@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23188418267CE8C9008D61D7 /* DoneButtonAccessoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23188416267CE8C9008D61D7 /* DoneButtonAccessoryView.xib */; };
+		23188419267CE8C9008D61D7 /* DoneButtonAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23188417267CE8C9008D61D7 /* DoneButtonAccessoryView.swift */; };
+		2318841C267CE9F7008D61D7 /* CustomPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2318841B267CE9F7008D61D7 /* CustomPickerView.swift */; };
+		2318841F267CEBA2008D61D7 /* DeviceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2318841E267CEBA2008D61D7 /* DeviceHelper.swift */; };
+		234F6C74267DA258008FF71D /* CustomPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 234F6C73267DA258008FF71D /* CustomPickerView.xib */; };
+		234F6C77267DA7E4008FF71D /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234F6C76267DA7E4008FF71D /* CustomDatePicker.swift */; };
+		234F6C7A267DA7EF008FF71D /* CustomDatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 234F6C79267DA7EF008FF71D /* CustomDatePicker.xib */; };
 		23B716C1267CAE1C004839BD /* AddAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B716C0267CAE1C004839BD /* AddAlarmViewController.swift */; };
 		23B716C4267CB358004839BD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B716C3267CB358004839BD /* Constants.swift */; };
 		23B716C8267CB40B004839BD /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B716C7267CB40B004839BD /* DateHelper.swift */; };
@@ -23,6 +30,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23188416267CE8C9008D61D7 /* DoneButtonAccessoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoneButtonAccessoryView.xib; sourceTree = "<group>"; };
+		23188417267CE8C9008D61D7 /* DoneButtonAccessoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoneButtonAccessoryView.swift; sourceTree = "<group>"; };
+		2318841B267CE9F7008D61D7 /* CustomPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPickerView.swift; sourceTree = "<group>"; };
+		2318841E267CEBA2008D61D7 /* DeviceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceHelper.swift; sourceTree = "<group>"; };
+		234F6C73267DA258008FF71D /* CustomPickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomPickerView.xib; sourceTree = "<group>"; };
+		234F6C76267DA7E4008FF71D /* CustomDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
+		234F6C79267DA7EF008FF71D /* CustomDatePicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomDatePicker.xib; sourceTree = "<group>"; };
 		23B716C0267CAE1C004839BD /* AddAlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmViewController.swift; sourceTree = "<group>"; };
 		23B716C3267CB358004839BD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		23B716C7267CB40B004839BD /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
@@ -51,10 +65,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2318840C267CE4AE008D61D7 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				23188417267CE8C9008D61D7 /* DoneButtonAccessoryView.swift */,
+				23188416267CE8C9008D61D7 /* DoneButtonAccessoryView.xib */,
+				2318841B267CE9F7008D61D7 /* CustomPickerView.swift */,
+				234F6C73267DA258008FF71D /* CustomPickerView.xib */,
+				234F6C76267DA7E4008FF71D /* CustomDatePicker.swift */,
+				234F6C79267DA7EF008FF71D /* CustomDatePicker.xib */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
 		23B716C6267CB400004839BD /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				23B716C7267CB40B004839BD /* DateHelper.swift */,
+				2318841E267CEBA2008D61D7 /* DeviceHelper.swift */,
 				23B716CA267CB519004839BD /* AlertHelper.swift */,
 			);
 			path = Helpers;
@@ -84,6 +112,7 @@
 				23B716C3267CB358004839BD /* Constants.swift */,
 				23B716C6267CB400004839BD /* Helpers */,
 				23BB7EEB267C76C400C11272 /* Models */,
+				2318840C267CE4AE008D61D7 /* CustomViews */,
 				23BB7EEC267C76C400C11272 /* TableViewCells */,
 				23BB7EE9267C76C400C11272 /* ViewController */,
 				23BB7ED6267C6F8400C11272 /* Main.storyboard */,
@@ -178,7 +207,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				23BB7EE0267C6F8500C11272 /* LaunchScreen.storyboard in Resources */,
+				234F6C74267DA258008FF71D /* CustomPickerView.xib in Resources */,
+				23188418267CE8C9008D61D7 /* DoneButtonAccessoryView.xib in Resources */,
 				23BB7EDD267C6F8500C11272 /* Assets.xcassets in Resources */,
+				234F6C7A267DA7EF008FF71D /* CustomDatePicker.xib in Resources */,
 				23BB7ED8267C6F8400C11272 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -190,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23188419267CE8C9008D61D7 /* DoneButtonAccessoryView.swift in Sources */,
 				23BB7ED1267C6F8400C11272 /* AppDelegate.swift in Sources */,
 				23BB7EDB267C6F8400C11272 /* Alaramanam.xcdatamodeld in Sources */,
 				23B716C1267CAE1C004839BD /* AddAlarmViewController.swift in Sources */,
@@ -198,7 +231,10 @@
 				23BB7ED3267C6F8400C11272 /* SceneDelegate.swift in Sources */,
 				23B716C8267CB40B004839BD /* DateHelper.swift in Sources */,
 				23BB7EF4267C82A800C11272 /* MyAlarmCell.swift in Sources */,
+				2318841F267CEBA2008D61D7 /* DeviceHelper.swift in Sources */,
+				2318841C267CE9F7008D61D7 /* CustomPickerView.swift in Sources */,
 				23B716CB267CB519004839BD /* AlertHelper.swift in Sources */,
+				234F6C77267DA7E4008FF71D /* CustomDatePicker.swift in Sources */,
 				23B716C4267CB358004839BD /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

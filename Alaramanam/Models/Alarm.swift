@@ -7,16 +7,19 @@
 
 import Foundation
 
-enum AlarmRepeatTime: Int {
-    case none           = 0
+enum AlarmRepeatTime: Int, CaseIterable {
     case daily          = 24
     case alternately    = 48
     case weekly         = 144
     
+    static func returnCaseStrings() -> [String] {
+        return self.allCases.compactMap { (type) -> String? in
+            return type.returnString()
+        }
+    }
+    
     func returnString() -> String {
         switch self {
-        case .none:
-            return "None"
         case .daily:
             return "Daily"
         case .alternately:
@@ -33,7 +36,7 @@ class Alarm: NSObject {
     var alarmDesc: String?
     var date: Date?
     var repeatable: Bool = false
-    var repeatHours: AlarmRepeatTime = .none
+    var repeatHours: AlarmRepeatTime = .daily
     
     class func getAlarmID() -> String {
         return UUID().uuidString + "\(Date())"
